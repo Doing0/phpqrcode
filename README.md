@@ -1,5 +1,6 @@
 # phpqrcode
 ## 调用说明
+>  注：不会自动创建文件夹如果文件夹不存在会报错,以下为例就得先创建文件夹uploads
 ```
  $text = "Test";
  $outfile = "uploads/222.png";
