@@ -134,7 +134,7 @@ class QRcode {
     }
 
     //----------------------------------------------------------------------
-    public static function png($text, $outfile = false,$size = 6,$color="#000", $level = Constants::QR_ECLEVEL_H, $margin = 2, $saveandprint=false)
+    public static function png($text, $outfile = false,$size = 6, $color="#000", $level = Constants::QR_ECLEVEL_H, $margin = 2, $saveandprint=false)
     {
         $enc = QRencode::factory($level, $size, $margin);
         return $enc->encodePNG($text, $outfile, $saveandprint=false,$color);
@@ -153,4 +153,36 @@ class QRcode {
         $enc = QRencode::factory($level, $size, $margin);
         return $enc->encodeRAW($text, $outfile);
     }
-}
+
+    /** 简述:生成的二维码添加头像或者logo并返回路径
+     *
+     * @params
+     *
+     */
+    public static function addHeader($header,$QR)
+    {
+        # 二维码资源
+        $QR_Obj = imagecreatefromstring(file_get_contents($QR));
+        #头像资源
+        $header_Obj = imagecreatefromstring(file_get_contents($header));
+        //二维码图片宽度
+        $QR_width = imagesx($QR_Obj);
+        //二维码图片高度
+        $QR_height = imagesy($QR_Obj);
+        //添加图片宽度
+        $header_width = imagesx($header_Obj);
+        //添加图片高度
+        $header_height = imagesy($header_Obj);
+
+        $logo_qr_width = $QR_width / 5;
+        $scale = $header_width/$logo_qr_width;
+        $logo_qr_height = $header_height/$scale;
+        $from_width = ($QR_width - $logo_qr_width) / 2;
+        //重新组合图片并调整大小
+        imagecopyresampled($QR_Obj, $header_Obj, $from_width, $from_width, 0, 0, $logo_qr_width,
+                           $logo_qr_height, $header_width, $header_height);
+        if (imagepng($QR_Obj, $QR) !==true) throw new Exception('服务器繁忙');
+        return $QR;
+    }//pf
+}//class
+

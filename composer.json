@@ -8,5 +8,9 @@
             "email": "vip.dulin@gmial.com"
         }
     ],
-    "require": {}
+    "require": {
+        "psr-4": {
+            "PHPQRCode\\": "src/lib"
+        }
+    }
 }
