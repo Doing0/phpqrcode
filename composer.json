@@ -1,16 +1,23 @@
 {
-    "name": "doing/phpqrcode",
-    "description": "phpqrcode",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Doing",
-            "email": "vip.dulin@gmial.com"
-        }
-    ],
-    "require": {
-        "psr-4": {
-            "PHPQRCode\\": "src/lib"
-        }
+  "name": "doing/phpqrcode",
+  "description": "phpqrcode",
+  "keywords": [
+    "phpqrcode"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Doing",
+      "email": "vip.dulin@gmial.com"
     }
+  ],
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPQRCode\\": "src/Doing"
+    }
+  }
 }
