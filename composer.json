@@ -1,0 +1,12 @@
+{
+    "name": "doing/phpqrcode",
+    "description": "phpqrcode",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Doing",
+            "email": "vip.dulin@gmial.com"
+        }
+    ],
+    "require": {}
+}
