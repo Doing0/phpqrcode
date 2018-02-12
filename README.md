@@ -5,7 +5,7 @@
  $outfile = "uploads/222.png";
  $size = 6;
  //调用方法成功后,会在相应文件夹下生成二维码文件
- QRcode::png($text, $outFile, $size);
+ QRcode::png($text, $outfile, $size);
 ```
 
 ## png方法一共7个参数(建议只填$text,$outfile)

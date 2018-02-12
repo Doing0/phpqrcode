@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PHPQRCode\\": "src/Doing"
+      "PHPQRCode\\": "src/"
     }
   }
 }
