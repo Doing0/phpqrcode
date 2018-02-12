@@ -16,3 +16,13 @@
 5. $level是容错率模式是最高:强烈建议不修改
 6. $margin=2二维码外面的白边距离越大留白越大,强烈建议不修改
 7. $saveandprint是否打印强烈建议不修改
+
+## 给二维码加头像或者logo
+ ```
+ $QR调用png生成的二维码全路径
+ $QR = 'D:\phpStudy\WWW\credits\public\uploads\2.png';
+ $header头像全路径:头像一定是正方形
+ $header = 'D:\phpStudy\WWW\credits\public\uploads\1.png';
+ $QR = QRcode::addHeader($header, $QR);
+ //调用addHeader后,之前的二维码被覆盖,生成合并后二维码,并返回全路径$QR
+ ```
