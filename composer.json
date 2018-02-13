@@ -1,8 +1,8 @@
 {
   "name": "doing/phpqrcode",
-  "description": "phpqrcode",
+  "description": "基于phpqrcode修改的二维码生成工具:可自定义二维码颜色和头像",
   "keywords": [
-    "phpqrcode"
+    "phpqrcode","二维码"
   ],
   "type": "library",
   "license": "MIT",
