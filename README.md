@@ -27,3 +27,22 @@
  $QR = QRcode::addHeader($header, $QR);
  //调用addHeader后,之前的二维码被覆盖,生成合并后二维码,并返回全路径$QR
  ```
+ 
+ 
+## VCARD名片信息
+~~~
+$content = 'BEGIN:VCARD' . "\n";
+$content .= 'VERSION:2.1' . "\n";
+$content .= 'N:张' . "\n";
+$content .= 'FN:三' . "\n";
+$content .= 'TEL;WORK;VOICE:18780808080' . "\n";
+$content .= 'ORG:公司:xxx科技有限公司'. "\n";
+$content .= 'END:VCARD' . "\n";
+$file = 'zs.png';
+//调用方法成功后,会在相应文件夹下生成二维码文件
+ QRcode::png($content, $file);
+ 
+ 当扫码此二维码时,点击保存联系人就会把联系人的姓+名 电话 公司信息等保存在联系人里面
+ 请求参数可去百度搜索vcard参数
+
+~~~
