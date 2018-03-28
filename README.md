@@ -1,6 +1,6 @@
 # 文档
 > **写在前面**
-> 1. 安装命令`composer require doing/phpqrcode dev-master`(如果安装不是最新或者没找到包可能是中国镜像有延迟)
+> 1. 安装命令`composer require doing/phpqrcode 版本号` ，例 `composer require doing/phpqrcode 1.*`(如果安装不是最新或者没找到包可能是中国镜像有延迟)
 > 2. 此包可以集成任何框架:所以PHP都能集成(本包作者在ThinkPHP5中编写，故在此框架下集成可能会有更好的体验)
 > 3. 此包依赖于`phpqrcode`在此感谢为此奉献的作者们
 > 4. [packagist地址](https://packagist.org/packages/doing/phpqrcode)
